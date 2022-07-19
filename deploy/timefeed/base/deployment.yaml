@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timefeed
+  labels:
+    app: timefeed
+spec:
+  selector:
+    matchLabels:
+      app: timefeed
+  template:
+    metadata:
+      labels:
+        app: timefeed
+    spec:
+      containers:
+      - name: timefeed
+        image: turtle2005/timefeed:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: azure
+        - name: SPRING_MAIN_BANNER-MODE
+          value: "off"
