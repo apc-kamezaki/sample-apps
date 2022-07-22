@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'jp.co.ap_com.samples.flux'
-version = '1.0.1'
+version = '1.0.0'
 sourceCompatibility = '17'
 
 configurations {
@@ -17,8 +17,6 @@ configurations {
 
 repositories {
 	mavenCentral()
-	maven { url 'https://repo.spring.io/milestone' }
-	maven { url 'https://repo.spring.io/snapshot' }
 }
 
 springBoot {
@@ -26,8 +24,10 @@ springBoot {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.1'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

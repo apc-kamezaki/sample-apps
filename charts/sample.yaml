@@ -1,0 +1,6 @@
+image:
+  repository: turtle2005/aggregator
+  tag: 1.0.0
+
+service:
+  type: LoadBalancer
