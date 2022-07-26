@@ -4,3 +4,7 @@ image:
 
 service:
   type: LoadBalancer
+
+env:
+- name: TIMEFEED_HOST
+  value: http://timefeed:8080

@@ -77,8 +77,8 @@ helm push spring-boot-app-<ver>.tgz oci://$ACR_NAME.azurecr.io/helm
 
 # deploy using oci
 helm upgrade aggregator --install oci://$ACR_NAME.azurecr.io/helm/spring-boot-app \
-    --version 0.1.0 \
-    --namespace apps --create-namespace \
+    --version 0.1.1 \
+    --namespace staging --create-namespace \
     --values sample.yaml
 
 ```
