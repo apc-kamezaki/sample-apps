@@ -4,11 +4,11 @@ namespace: staging
 resources:
 - ../base
 - ./namespace.yaml
-imageTags:
-- name: turtle2005/timefeed
-  newTag: "1.0.0"
 patches:
 - target:
     kind: HorizontalPodAutoscaler
     name: timefeed
   path: hpa.yaml
+imageTags:
+- name: turtle2005/timefeed
+  newTag: 1.0.1
