@@ -9,6 +9,6 @@ patches:
     kind: HorizontalPodAutoscaler
     name: timefeed
   path: hpa.yaml
-imageTags:
+images:
 - name: turtle2005/timefeed
   newTag: 1.0.1
